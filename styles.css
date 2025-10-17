@@ -49,4 +49,20 @@ input,select,textarea{border:1px solid #cbd5e1;border-radius:10px;padding:10px 1
 .faq details{border:1px solid var(--soft);border-radius:12px;padding:12px 14px;margin:10px 0;background:#fff}.faq summary{font-weight:600;cursor:pointer}.faq p{color:var(--muted)}
 .site-footer{border-top:1px solid #eef2f7;padding:22px 0}.site-footer .container{display:flex;align-items:center;justify-content:space-between}.foot-right a{margin-left:12px;color:#334155}.brand-mini{display:flex;align-items:center;gap:8px}
 .hidden{display:none}
+/* ---- Brand / Logo styling ---- */
+.brand-name {
+  font-weight: 700;
+  letter-spacing: .2px;
+  color: var(--ink);
+}
+
+.brand-script {
+  font-family: 'Allison', cursive;
+  font-weight: 400;
+  font-size: 34px;        /* try 28–40px to adjust size */
+  letter-spacing: 0.5px;
+  color: var(--brand-ink);
+  display: inline-block;
+  transform: translateY(2px);
+}
 @media (max-width:900px){.hero-inner{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.cards{grid-template-columns:1fr}.grid{grid-template-columns:1fr}}
