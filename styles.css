@@ -135,33 +135,39 @@ background-image:
   transition: all 0.25s ease;
 }
 
-./* === Rounded Primary Button === */
-/* === Polished Oval Primary Button === */
-.btn-primary {
-  background: linear-gradient(135deg, #4B3621 0%, #7B4F2A 100%);
-  color: #fff8f0;
+
+/* === Luxurious Oval Button (Final Polished Version) === */
+.btn-primary,
+.cta,
+button,
+a.btn-primary {
+  background: linear-gradient(135deg, #5a3a1d 0%, #a47c55 100%);
+  color: #fffaf5;
   font-size: 1.1rem;
   font-weight: 500;
-  padding: 0.9rem 2.4rem;
+  padding: 0.9rem 2.6rem;
   border: none;
-  border-radius: 999px; /* perfectly oval */
+  border-radius: 9999px; /* makes it perfectly oval */
   text-decoration: none;
   display: inline-block;
   letter-spacing: 0.3px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
   transition: all 0.3s ease;
   position: relative;
   z-index: 3;
 }
 
-.btn-primary:hover {
-  background: linear-gradient(135deg, #2F2418 0%, #5C3E28 100%);
-  color: #fff;
+/* Hover effect – soft coffee & cream gradient */
+.btn-primary:hover,
+.cta:hover,
+a.btn-primary:hover {
+  background: linear-gradient(135deg, #e5c19b 0%, #7b4f2a 100%);
+  color: #2b1c10;
   transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
 }
 
-/* Fade-in animation for hero button */
+/* Subtle fade-in animation for hero button */
 .hero-buttons {
   animation: fadeIn 1.8s ease 0.8s forwards;
   opacity: 0;
@@ -173,12 +179,11 @@ background-image:
   }
 }
 
+/* Add gentle text contrast on hero text */
+.hero-text {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
 }
 
 }
