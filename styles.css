@@ -74,67 +74,14 @@ input,select,textarea{border:1px solid #cbd5e1;border-radius:10px;padding:10px 1
   display: flex;
   align-items: center;
   justify-content: center;
-}
 
-.hero-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.65);
-}
+  background-color: var(--bg);
 
-.hero-text {
-  position: absolute;
-  text-align: center;
-  color: #fffdf7;
-  padding: 0 1rem;
-  max-width: 800px;
-}
-
-.hero-text h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(32px, 5vw, 56px);
-  line-height: 1.2;
-  color: #f5eee3;
-}
-
-.hero-text p {
-  font-family: 'Raleway', sans-serif;
-  font-size: 20px;
-  color: #f0e8dc;
-  margin-top: 10px;
-}
-
-.hero-buttons {
-  margin-top: 24px;
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
-
-.btn-primary, .btn-secondary {
-  padding: 12px 24px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.btn-primary {
-  background-color: #4B3621;
-  color: #fff;
-}
-
-.btn-primary:hover {
-  background-color: #2F2418;
-}
-
-.btn-secondary {
-  border: 2px solid #fffdf7;
-  color: #fffdf7;
-}
-
-.btn-secondary:hover {
-  background-color: #fffdf7;
-  color: #2F2418;
+  /* your cozy candlelit cafe photo */
+  background-image:
+    linear-gradient(to bottom, rgba(249,246,241,0.65), rgba(249,246,241,0.35)),
+    url('assets/hero.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
