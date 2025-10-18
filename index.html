@@ -32,7 +32,7 @@
       <nav class="nav">
         <a href="#how">How it works</a>
         <a href="#apply">Apply</a>
-        <a href="#stories">Stories</a>
+
         <a href="#faq">FAQ</a>
       </nav>
 
@@ -56,16 +56,78 @@
   <!-- Main content (simple placeholders so nav links work).
        You can customize these later. -->
   <main>
-    <section id="how" class="container" style="padding:56px 0;">
-      <h2>How it works</h2>
-      <p>Thoughtful screening, curated introductions, and real-world chemistry.</p>
-    </section>
+    <section id="how" class="section section--band">
+  <div class="container">
+    <h2>How it works</h2>
 
-    <section id="apply" class="container" style="padding:56px 0;">
-      <h2>Apply</h2>
-      <p>Tell us a bit about yourself and what you’re seeking. We’ll take it from there.</p>
-      <a class="cta" href="#apply">Start your application</a>
-    </section>
+    <div class="steps">
+      <div class="step">
+        <span class="badge">1</span>
+        <h3>Apply</h3>
+        <p>Tell us about you and who you hope to meet. It’s quick and thoughtful.</p>
+      </div>
+
+      <div class="step">
+        <span class="badge">2</span>
+        <h3>We review</h3>
+        <p>We assess fit and values—then curate a high-quality introduction.</p>
+      </div>
+
+      <div class="step">
+        <span class="badge">3</span>
+        <h3>The intro</h3>
+        <p>A warm, human introduction and a low-pressure first meet (coffee or wine).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <section id="apply" class="section">
+  <div class="container">
+    <h2>Apply</h2>
+    <p>Tell us a bit about yourself and what you’re seeking. We’ll take it from there.</p>
+
+    <form name="apply" method="POST" data-netlify="true" class="apply-form">
+      <input type="hidden" name="form-name" value="apply" />
+
+      <div class="grid">
+        <label>Email
+          <input type="email" name="email" required />
+        </label>
+
+        <label>City & time zone
+          <input type="text" name="city" placeholder="e.g., Los Angeles, PT" />
+        </label>
+
+        <label>Gender identity
+          <select name="gender">
+            <option value="" selected disabled>Select…</option>
+            <option>Woman</option>
+            <option>Man</option>
+            <option>Non-binary</option>
+            <option>Prefer not to say</option>
+          </select>
+        </label>
+
+        <label>Seeking (select one or more)
+          <select name="seeking[]" multiple>
+            <option>Women</option>
+            <option>Men</option>
+            <option>Non-binary</option>
+          </select>
+        </label>
+      </div>
+
+      <label>What are you hoping to find?
+        <textarea name="bio" placeholder="A few lines about you & what you’re seeking…"></textarea>
+      </label>
+
+      <button type="submit" class="btn-primary">Start your application</button>
+    </form>
+  </div>
+</section>
+
 
     
 
