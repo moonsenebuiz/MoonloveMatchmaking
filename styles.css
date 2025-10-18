@@ -132,17 +132,39 @@ background-image:
   transition: all 0.25s ease;
 }
 
+./* === Rounded Primary Button === */
 .btn-primary {
-  background-color: #4d2c1d;
-  color: #fff8ef;
+  background-color: var(--brand);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.9rem 2.2rem;
   border: none;
-  box-shadow: 0 0 12px rgba(255, 228, 202, 0.3);
+  border-radius: 999px; /* makes it oval */
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 3;
 }
 
 .btn-primary:hover {
-  background-color: #3a1f13;
-  box-shadow: 0 0 20px rgba(255, 228, 202, 0.6);
+ background: linear-gradient(135deg, #4B3621 0%, #7B4F2A 100%);
+
   transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}.hero-buttons {
+  animation: fadeIn 1.5s ease 0.5s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
 }
 
 .btn-secondary {
