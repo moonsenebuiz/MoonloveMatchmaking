@@ -1,166 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Moonlove — Thoughtful, human matchmaking for real-world chemistry.</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Allison&display=swap" rel="stylesheet">
 
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Moonlove — Thoughtful, human matchmaking for real-world chemistry.</title>
-<meta name="description" content="A boutique, values-driven matchmaking studio in Los Angeles. Thoughtful screening, curated introductions, and coaching for lasting connections." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css" />
-<meta property="og:title" content="Moonlove — Thoughtful, human matchmaking for real-world chemistry.">
-<meta property="og:description" content="Boutique, values-driven matchmaking with curated introductions.">
-<meta property="og:type" content="website">
-<meta property="og:image" content="assets/og-image.jpg">
-<link rel="icon" href="assets/favicon.png" />
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Social cards (optional, safe to keep) -->
+  <meta property="og:title" content="Moonlove — Thoughtful, human matchmaking for real-world chemistry.">
+  <meta property="og:description" content="Boutique, values-driven matchmaking with curated introductions.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/og-image.jpg">
+  <link rel="icon" href="assets/favicon.png" />
 </head>
+
 <body>
-<header class="site-header">
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">
+        <div class="logo" aria-hidden="true">ML</div>
+        <span class="brand-name"><span class="brand-script">Moonlove</span></span>
+      </a>
 
-  <div class="container">
-    <a class="brand" href="/">
-      <div class="logo" aria-hidden="true">ML</div>
-      <span class="brand-name"><span class="brand-script">Moonlove</span></span>
+      <nav class="nav">
+        <a href="#how">How it works</a>
+        <a href="#apply">Apply</a>
+        <a href="#stories">Stories</a>
+        <a href="#faq">FAQ</a>
+      </nav>
 
-    </a>
-    <nav class="nav">
-      <a href="#how">How it works</a>
-      <a href="#apply">Apply</a>
-      <a href="#stories">Stories</a>
-      <a href="#faq">FAQ</a>
-    </nav>
-    <a class="cta" href="#apply" role="button" aria-label="Apply now">Apply</a>
-  </div>
-</header>
-<section class="hero">
-  <
-  <div class="hero-text">
-    <h1>The universe sets the scene — we make the introduction</h1>
-    <p>Some matches are written in the stars — others by Moonlove</p>
-    <div class="hero-buttons">
-      <a href="#apply" class="btn-primary">Start your story</a>
-      <a href="#learn" class="btn-secondary">Learn more</a>
+      <a class="cta" href="#apply" role="button" aria-label="Apply now">Apply</a>
     </div>
-  </div>
+  </header>
 
-      <div class="hero-art" aria-hidden="true">
-        <div class="card">
-          <div class="card-tag">Curated Intro</div>
-          <div class="card-body">
-            <div class="avatar A"></div>
-            <div class="avatar B"></div>
-            <div class="intro">
-              <strong>A & B</strong>
-              <span>Friday at 7:30 PM • Los Angeles</span>
-            </div>
-          </div>
-        </div>
-        <div class="blob"></div>
+  <!-- HERO (single source of truth) -->
+  <section class="hero" id="home">
+    <!-- background image comes from CSS: url('assets/hero.jpeg') -->
+    <div class="hero-text">
+      <h1>The universe sets the scene — we make the introduction</h1>
+      <p>Some matches are written in the stars — others by Moonlove</p>
+
+      <div class="hero-buttons">
+        <a href="#apply" class="btn-primary">Start your story</a>
+        <a href="#how" class="btn-secondary">Learn more</a>
       </div>
     </div>
   </section>
 
-  <section id="how" class="how">
-    <div class="container">
+  <!-- Main content (simple placeholders so nav links work).
+       You can customize these later. -->
+  <main>
+    <section id="how" class="container" style="padding:56px 0;">
       <h2>How it works</h2>
-      <div class="steps">
-        <div class="step"><div class="step-num">1</div><h3>Apply</h3><p>Tell us about your values, lifestyle, and relationship goals. Every profile is reviewed by hand.</p></div>
-        <div class="step"><div class="step-num">2</div><h3>Vetting</h3><p>We verify identity, run light screening, and interview to understand your non‑negotiables.</p></div>
-        <div class="step"><div class="step-num">3</div><h3>Curated intros</h3><p>Receive thoughtful matches with context on why we think you’ll click—no spam, just signal.</p></div>
-        <div class="step"><div class="step-num">4</div><h3>Support</h3><p>Date with clarity. We provide feedback loops and optional coaching to refine your journey.</p></div>
-      </div>
-    </div>
-  </section>
+      <p>Thoughtful screening, curated introductions, and real-world chemistry.</p>
+    </section>
 
-  <section id="apply" class="apply">
-    <div class="container">
-      <h2>Apply now</h2>
-      <p class="apply-sub">Private, secure, ~8 minutes. We’ll follow up within 72 hours.</p>
+    <section id="apply" class="container" style="padding:56px 0;">
+      <h2>Apply</h2>
+      <p>Tell us a bit about yourself and what you’re seeking. We’ll take it from there.</p>
+      <a class="cta" href="#apply">Start your application</a>
+    </section>
 
-      <form name="application" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="card form">
-        <input type="hidden" name="form-name" value="application" />
-        <p class="hidden"><label>Don’t fill this out if you’re human: <input name="bot-field" /></label></p>
+    <section id="stories" class="container" style="padding:56px 0;">
+      <h2>Stories</h2>
+      <p>Real introductions, real outcomes. (Add testimonials here later.)</p>
+    </section>
 
-        <fieldset>
-          <legend>About you</legend>
-          <div class="grid">
-            <label>First name<input required name="first_name" autocomplete="given-name" /></label>
-            <label>Last name<input required name="last_name" autocomplete="family-name" /></label>
-            <label>Email<input required type="email" name="email" autocomplete="email" /></label>
-            <label>City &amp; timezone<input name="city" placeholder="e.g., Los Angeles, PT" /></label>
-            <label>Age range
-              <select name="age_range" required>
-                <option value="">Select…</option><option>21–29</option><option>30–39</option><option>40–49</option><option>50–59</option><option>60+</option>
-              </select>
-            </label>
-            <label>Gender identity<input name="gender_identity" /></label>
-            <label>Seeking (gender(s))<input name="seeking" /></label>
-          </div>
-        </fieldset>
-
-        <fieldset>
-          <legend>Lifestyle & values</legend>
-          <div class="grid">
-            <label>Top values<input name="values" placeholder="e.g., growth, family, humor" /></label>
-            <label>Relationship goal
-              <select name="goal" required><option value="">Select…</option><option>Serious / long-term</option><option>Exploring / open to long-term</option><option>Not sure</option></select>
-            </label>
-            <label>Deal-breakers<input name="dealbreakers" placeholder="e.g., wants kids / doesn’t want kids, smoking" /></label>
-            <label>Scheduling & availability<input name="availability" placeholder="e.g., weeknights, weekends, travel often" /></label>
-            <label>Bio<textarea name="bio" rows="4" placeholder="A few lines that capture you at your best."></textarea></label>
-          </div>
-        </fieldset>
-
-        <fieldset>
-          <legend>Verification</legend>
-          <div class="grid">
-            <label>LinkedIn / Instagram (optional)<input name="socials" placeholder="Links (optional)" /></label>
-            <label>Photo (optional)<input name="photo" type="file" accept="image/*" /></label>
-          </div>
-          <label class="checkbox"><input type="checkbox" required name="consent" /><span>I agree to the <a href="terms.html">Terms</a> and <a href="privacy.html">Privacy Policy</a>.</span></label>
-        </fieldset>
-
-        <div class="actions">
-          <button type="submit" class="cta">Submit application</button>
-          <a class="ghost" href="mailto:moonsenebusiness@gmail.com?subject=Moonlove%20Application">Prefer email?</a>
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <section id="stories" class="stories">
-    <div class="container">
-      <h2>Success stories</h2>
-      <div class="cards">
-        <article class="story card"><h3>“Aligned from day one.”</h3><p>“We would’ve never met on apps. The context and clarity made all the difference.”</p><div class="byline">— E. & R., engaged in 9 months</div></article>
-        <article class="story card"><h3>“Thoughtful & discreet.”</h3><p>“Felt seen and respected. The feedback loop helped me break old patterns.”</p><div class="byline">— J., LA</div></article>
-        <article class="story card"><h3>“Quality over quantity.”</h3><p>“Only a handful of intros—but each was on-point.”</p><div class="byline">— A., NYC</div></article>
-      </div>
-    </div>
-  </section>
-
-  <section id="faq" class="faq">
-    <div class="container">
+    <section id="faq" class="container" style="padding:56px 0;">
       <h2>FAQ</h2>
-      <details><summary>Who is this for?</summary><p>High intent singles who value privacy, intentionality, and compatibility beyond the surface.</p></details>
-      <details><summary>Do you accept everyone?</summary><p>No. We curate for intent, kindness, and aligned expectations. If there is not a fit now, we will be transparent.</p></details>
-      <details><summary>What does it cost?</summary><p>Consultations are complimentary. Packages are available on request.</p></details>
-      <details><summary>Where do you operate?</summary><p>Primarily Los Angeles. Remote clients welcome.</p></details>
-      <details><summary>How do you handle privacy?</summary><p>We use secure storage, limited access processes, and share information on a need to know basis. See our <a href="privacy.html">Privacy Policy</a>.</p></details>
-    </div>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <div class="container">
-    <div class="foot-left"><div class="brand-mini"><div class="logo" aria-hidden="true">ML</div><span>Moonlove</span></div><small>© 2025 Moonlove. All rights reserved.</small></div>
-    <div class="foot-right"><a href="mailto:moonsenebusiness@gmail.com">moonsenebusiness@gmail.com</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></div>
-  </div>
-</footer>
-
-<script src="app.js"></script>
+      <p>Answers to common questions about Moonlove.</p>
+    </section>
+  </main>
 </body>
 </html>
