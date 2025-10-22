@@ -92,57 +92,42 @@
     <h2>Apply</h2>
     <p>Tell us a bit about yourself and what you’re seeking. We’ll take it from there.</p>
 
-  <form
-  name="apply"
-  method="POST"
-  netlify
-  netlify-honeypot="bot-field"
-  action="/thank-you.html"
-  class="apply-form"
->
-  <!-- Required by Netlify -->
+ <form name="apply" method="POST" data-netlify="true" class="apply-form" action="/thank-you.html">
   <input type="hidden" name="form-name" value="apply" />
-  <!-- Honeypot (spam trap) -->
-  <p class="hidden" style="display:none">
-    <label>Don’t fill this out if you’re human:
-      <input name="bot-field" />
-    </label>
-  </p>
+  
+  <label>Email
+    <input type="email" name="email" required />
+  </label>
 
-  <div class="grid">
-    <label>Email
-      <input type="email" name="email" required />
-    </label>
+  <label>City & time zone
+    <input type="text" name="city" placeholder="e.g., Los Angeles, PT" />
+  </label>
 
-    <label>City &amp; time zone
-      <input type="text" name="city" placeholder="e.g., Los Angeles, PT" />
-    </label>
+  <label>Gender identity
+    <select name="gender">
+      <option value="" selected disabled>Select…</option>
+      <option>Woman</option>
+      <option>Man</option>
+      <option>Non-binary</option>
+      <option>Prefer not to say</option>
+    </select>
+  </label>
 
-    <label>Gender identity
-      <select name="gender" required>
-        <option value="" selected disabled>Select…</option>
-        <option>Woman</option>
-        <option>Man</option>
-        <option>Non-binary</option>
-        <option>Prefer not to say</option>
-      </select>
-    </label>
+  <label>Seeking (select one or more)
+    <select name="seeking[]" multiple>
+      <option>Women</option>
+      <option>Men</option>
+      <option>Non-binary</option>
+    </select>
+  </label>
 
-    <label>Seeking (select one or more)
-      <select name="seeking[]" multiple>
-        <option>Women</option>
-        <option>Men</option>
-        <option>Non-binary</option>
-      </select>
-    </label>
-
-    <label>What are you hoping to find?
-      <textarea name="bio" placeholder="A few lines about you & what you’re seeking…" rows="4"></textarea>
-    </label>
-  </div>
+  <label>What are you hoping to find?
+    <textarea name="bio" placeholder="A few lines…"></textarea>
+  </label>
 
   <button type="submit" class="btn-primary">Start your application</button>
 </form>
+
 
 
   </div>
