@@ -125,7 +125,70 @@ input,select,textarea{border:1px solid #cbd5e1;border-radius:10px;padding:10px 1
 .checkbox{display:flex;gap:10px;align-items:start}.actions{display:flex;gap:12px;align-items:center;margin-top:10px}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card.story h3{margin:0 0 8px}.card.story p{margin:0 0 10px;color:var(--muted)}.byline{font-size:14px;color:#64748b}
 .faq details{border:1px solid var(--soft);border-radius:12px;padding:12px 14px;margin:10px 0;background:#fff}.faq summary{font-weight:600;cursor:pointer}.faq p{color:var(--muted)}
-.site-footer{border-top:1px solid #eef2f7;padding:22px 0}.site-footer .container{display:flex;align-items:center;justify-content:space-between}.foot-right a{margin-left:12px;color:#334155}.brand-mini{display:flex;align-items:center;gap:8px}
+/* ===== Footer ===== */
+.site-footer {
+  background: rgba(247, 241, 233, 0.92);        /* warm cream veil */
+  border-top: 1px solid rgba(0,0,0,0.06);
+  padding: 28px 0;
+}
+
+.site-footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 24px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.logo-badge {
+  display: inline-grid;
+  place-items: center;
+  width: 28px; height: 28px;
+  border-radius: 8px;
+  background: var(--brand);           /* coffee button base */
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: .5px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-links a {
+  color: var(--brand-ink);            /* darker coffee hover */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.site-footer .tiny {
+  flex: 1 1 100%;
+  color: var(--muted);
+  font-size: 13px;
+  margin: 0;
+}
+
+.site-footer .made { opacity: .9; }
+
+/* mobile: stack neatly */
+@media (max-width: 720px) {
+  .site-footer .container { justify-content: center; text-align: center; }
+  .footer-links { flex-wrap: wrap; justify-content: center; }
+}
+
 .hidden{display:none}
 /* ---- Brand / Logo styling ---- */
 .brand-name {
