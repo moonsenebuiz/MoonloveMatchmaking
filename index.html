@@ -92,18 +92,21 @@
     <h2>Apply</h2>
     <p>Tell us a bit about yourself and what you’re seeking. We’ll take it from there.</p>
 
-   <form
+  <form
   name="apply"
   method="POST"
-  action="/thank-you"
-  data-netlify="true"
+  netlify
   netlify-honeypot="bot-field"
+  action="/thank-you.html"
   class="apply-form"
 >
-  <!-- Netlify hidden fields -->
+  <!-- Required by Netlify -->
   <input type="hidden" name="form-name" value="apply" />
-  <p style="display:none;">
-    <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+  <!-- Honeypot (spam trap) -->
+  <p class="hidden" style="display:none">
+    <label>Don’t fill this out if you’re human:
+      <input name="bot-field" />
+    </label>
   </p>
 
   <div class="grid">
@@ -111,13 +114,13 @@
       <input type="email" name="email" required />
     </label>
 
-    <label>City & timezone
-      <input type="text" name="city_timezone" placeholder="e.g., Los Angeles, PT" />
+    <label>City &amp; time zone
+      <input type="text" name="city" placeholder="e.g., Los Angeles, PT" />
     </label>
 
     <label>Gender identity
-      <select name="gender_identity">
-        <option value="">Select...</option>
+      <select name="gender" required>
+        <option value="" selected disabled>Select…</option>
         <option>Woman</option>
         <option>Man</option>
         <option>Non-binary</option>
@@ -133,30 +136,14 @@
       </select>
     </label>
 
-    <label>Top values
-      <input type="text" name="top_values" placeholder="e.g., curiosity, humor, loyalty" />
+    <label>What are you hoping to find?
+      <textarea name="bio" placeholder="A few lines about you & what you’re seeking…" rows="4"></textarea>
     </label>
-
-    <label>Relationship goal
-      <select name="relationship_goal">
-        <option value="">Select...</option>
-        <option>Serious relationship</option>
-        <option>Open to connection</option>
-        <option>Prefer not to say</option>
-      </select>
-    </label>
-
-    <label>Deal-breakers
-      <input type="text" name="deal_breakers" placeholder="e.g., smoking, kids, long-distance" />
-    </label>
-
-    <label>Bio
-      <textarea name="bio" placeholder="A few lines that capture who you are and what you're seeking."></textarea>
-    </label>
-
-    <button type="submit" class="btn-primary">Start your application</button>
   </div>
+
+  <button type="submit" class="btn-primary">Start your application</button>
 </form>
+
 
   </div>
 </section>
@@ -196,4 +183,10 @@
 
   </main>
 </body>
+  <!-- Netlify detection helper (hidden) -->
+<form name="apply" netlify hidden>
+  <input type="hidden" name="form-name" value="apply" />
+  <input type="email" name="email" />
+</form>
+
 </html>
