@@ -6,7 +6,7 @@ const AIRTABLE_API_KEY = process.env.AIRTABLE_API_KEY;
 const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID;
 
 // 👉 Change this if your Airtable table has a different name
-const AIRTABLE_TABLE_NAME = "Imported table"; // e.g. "Submissions" or whatever you used
+const AIRTABLE_TABLE_NAME = "Submissions"; // e.g. "Submissions" or whatever you used
 
 // Map HTML form field names -> Airtable column names
 const FIELD_MAP = {
