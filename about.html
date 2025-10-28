@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -18,16 +18,17 @@
   <meta property="og:image" content="assets/og-image.jpg" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2285%22>🌙</text></svg>">
 
-  <!-- Small safety padding so the CTA doesn't collide with footer even if theme spacing differs -->
+  <!-- Small local tweaks so About looks tidy even without touching the global CSS -->
   <style>
-    .about .intro{padding:64px 0 24px;}
-    .about .values{padding:16px 0 8px;}
-    .about .cta{padding:48px 0;}
+    .about .intro{padding:64px 0 16px;}
+    .about .intro h1{margin-bottom:12px;}
+    .about-cta{padding:40px 0;}
+    .about-cta .btn{display:inline-block;}
   </style>
 </head>
 
 <body>
-  <!-- Header (copied structure from index.html) -->
+  <!-- Header (same structure/classes as index.html) -->
   <header class="site-header">
     <div class="container">
       <a class="brand" href="/">
@@ -37,16 +38,15 @@
 
       <nav class="site-nav">
         <a href="index.html">Home</a>
-        <a href="about.html" class="active">About</a>
+        <a href="about.html" class="active" aria-current="page">About</a>
         <a href="blog.html">Blog</a>
-        <!-- Keep multiple common button class names so your existing CSS can catch one of them -->
         <a href="apply.html" class="btn apply apply-fab">Apply</a>
       </nav>
     </div>
   </header>
 
   <main class="about">
-    <!-- Intro -->
+    <!-- Intro copy only -->
     <section class="intro">
       <div class="container">
         <h1>About Moonlove</h1>
@@ -63,35 +63,15 @@
       </div>
     </section>
 
-    <!-- Three small value cards -->
-    <section class="values">
-      <div class="container">
-        <div class="grid-3">
-          <div class="card">
-            <h3>Human-first</h3>
-            <p>Every match is considered with care, context, and conversation.</p>
-          </div>
-          <div class="card">
-            <h3>Curated</h3>
-            <p>Quality over quantity. We introduce people who should actually meet.</p>
-          </div>
-          <div class="card">
-            <h3>Private</h3>
-            <p>Your details stay safe. We share only what’s needed to spark a hello.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Call to action -->
-    <section class="cta">
+    <!-- Compact CTA (renamed so it doesn't pick up the homepage's giant gradient) -->
+    <section class="about-cta">
       <div class="container center">
         <a href="apply.html" class="btn">Start your story</a>
       </div>
     </section>
   </main>
 
-  <!-- Footer (copied structure from index.html) -->
+  <!-- Footer (same as index.html) -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-brand">
@@ -112,7 +92,6 @@
     </div>
   </footer>
 
-  <!-- Scripts (same as index.html) -->
   <script src="app.js" defer></script>
 </body>
 </html>
