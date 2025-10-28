@@ -20,11 +20,15 @@
 
   <!-- Small local tweaks so About looks tidy even without touching the global CSS -->
   <style>
-    .about .intro{padding:64px 0 16px;}
-    .about .intro h1{margin-bottom:12px;}
-    .about-cta{padding:40px 0;}
-    .about-cta .btn{display:inline-block;}
-  </style>
+  .about .intro{padding:64px 0 16px;}
+  .about .intro h1{margin-bottom:12px;}
+  .about-cta{padding:40px 0;}
+  .about-cta .btn{display:inline-block;}
+
+  /* kill the thin border many themes add between sections */
+  main.about > section + section { border-top: 0; }
+</style>
+
 </head>
 
 <body>
