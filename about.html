@@ -8,19 +8,26 @@
   <!-- Fonts (same as index.html) -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Styles -->
+  <!-- Main styles -->
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- Social cards (optional) -->
+  <!-- Social (optional) -->
   <meta property="og:title" content="Moonlove — Thoughtful introductions for real-time connection." />
-  <meta property="og:description" content="Thoughtful freelance introductions for real-time connection — made with ❤️ in Los Angeles." />
+  <meta property="og:description" content="Thoughtful introductions for real-time connection — made with ❤️ in Los Angeles." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/og-image.jpg" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2285%22>🌙</text></svg>">
+
+  <!-- Small safety padding so the CTA doesn't collide with footer even if theme spacing differs -->
+  <style>
+    .about .intro{padding:64px 0 24px;}
+    .about .values{padding:16px 0 8px;}
+    .about .cta{padding:48px 0;}
+  </style>
 </head>
 
 <body>
-  <!-- Header / Nav (same structure/classes as index.html) -->
+  <!-- Header (copied structure from index.html) -->
   <header class="site-header">
     <div class="container">
       <a class="brand" href="/">
@@ -32,13 +39,14 @@
         <a href="index.html">Home</a>
         <a href="about.html" class="active">About</a>
         <a href="blog.html">Blog</a>
-        <a href="apply.html" class="btn">Apply</a>
+        <!-- Keep multiple common button class names so your existing CSS can catch one of them -->
+        <a href="apply.html" class="btn apply apply-fab">Apply</a>
       </nav>
     </div>
   </header>
 
   <main class="about">
-    <!-- Hero / Intro -->
+    <!-- Intro -->
     <section class="intro">
       <div class="container">
         <h1>About Moonlove</h1>
@@ -49,13 +57,13 @@
         </p>
         <p>
           Based in Los Angeles, we blend intuition, intention, and a touch of serendipity.
-          Whether you’re new to the city or just ready for something meaningful —
+          Whether you're new to the city or just ready for something meaningful —
           Moonlove is where modern connection meets timeless chemistry.
         </p>
       </div>
     </section>
 
-    <!-- Values (simple, clean blocks that your current CSS will handle) -->
+    <!-- Three small value cards -->
     <section class="values">
       <div class="container">
         <div class="grid-3">
@@ -75,7 +83,7 @@
       </div>
     </section>
 
-    <!-- CTA -->
+    <!-- Call to action -->
     <section class="cta">
       <div class="container center">
         <a href="apply.html" class="btn">Start your story</a>
@@ -83,7 +91,7 @@
     </section>
   </main>
 
-  <!-- Footer (same structure as index.html) -->
+  <!-- Footer (copied structure from index.html) -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-brand">
@@ -108,5 +116,3 @@
   <script src="app.js" defer></script>
 </body>
 </html>
-
-
