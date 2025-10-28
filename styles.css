@@ -444,3 +444,35 @@ a.btn-primary:hover {
   .steps { grid-template-columns: 1fr; }
   .apply-form .grid { grid-template-columns: 1fr; }
 }
+/* —— About page tweaks ——————————————————— */
+main.about .intro { padding: 64px 0 24px; }
+main.about .intro h1 { margin-bottom: 12px; }
+main.about .about-cta { display: none; } /* we’re removing “Start your story” anyway */
+
+/* Kill thin divider some themes add between stacked sections */
+main.about > section + section { border-top: 0; }
+
+/* —— Shared site header / nav polish ——————————————— */
+.site-header { position: relative; z-index: 2; }
+.site-header .container {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 24px; padding: 16px 0;
+}
+
+.site-nav { display: flex; align-items: center; gap: 20px; }
+.site-nav a {
+  font-weight: 600; text-decoration: none; opacity: .85;
+  padding: 6px 8px; border-radius: 10px;
+}
+.site-nav a:hover { opacity: 1; }
+.site-nav a.active {
+  opacity: 1; text-decoration: underline; text-underline-offset: 4px;
+}
+
+/* Button style (Apply) */
+.site-nav .btn {
+  padding: 10px 16px; border-radius: 999px; font-weight: 700;
+  background: linear-gradient(90deg,#805736,#a87448); color: #fff;
+  box-shadow: 0 8px 22px rgba(128,87,54,.25);
+}
+.site-nav .btn:hover { transform: translateY(-1px); }
