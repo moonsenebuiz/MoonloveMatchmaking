@@ -476,3 +476,68 @@ main.about > section + section { border-top: 0; }
   box-shadow: 0 8px 22px rgba(128,87,54,.25);
 }
 .site-nav .btn:hover { transform: translateY(-1px); }
+/* ---------- Global font tokens ---------- */
+:root{
+  --font-serif: 'Playfair Display', serif;
+  --font-body:  'Raleway', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  --font-script:'Allison', cursive;
+
+  --bg: #f4eadf;          /* your sand background */
+  --ink: #3a2e29;         /* deep cocoa */
+  --accent: #8b5a3c;      /* warm bronze */
+  --accent-dark:#5f3c28;  /* darker hover */
+}
+
+html, body { font-family: var(--font-body); color: var(--ink); background: var(--bg); }
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(244,234,223,0.85);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(0,0,0,0.03);
+}
+
+.site-header .container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* Brand (stamp thumbnail + wordmark) */
+.brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+.logo {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: url("assets/favicon-ml-stamp.png") center/cover no-repeat;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.05) inset;
+  flex: 0 0 28px;
+}
+.brand-name { display: inline-flex; align-items: baseline; gap: 6px; }
+.brand-script { font-family: var(--font-script); font-size: 28px; line-height: 1; }
+
+/* Nav */
+.site-nav { display: inline-flex; align-items: center; gap: 22px; }
+.site-nav a {
+  color: inherit; text-decoration: none; font-weight: 500; opacity: 0.85;
+}
+.site-nav a[aria-current="page"] { opacity: 1; text-decoration: underline; text-underline-offset: 6px; }
+
+/* Apply button styling used in header */
+.btn.apply {
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  color: #fff; padding: 10px 18px; border-radius: 999px; font-weight: 600;
+  box-shadow: 0 6px 18px rgba(139,90,60,0.25);
+}
+.btn.apply:hover { transform: translateY(-1px); box-shadow: 0 8px 22px rgba(139,90,60,0.32); }
+.apply-fab { margin-left: 4px; }
+
+/* Page container rhythm (optional, keeps About spacing consistent with Home) */
+main .container, .container-main {
+  max-width: 1120px; margin: 0 auto; padding: 56px 20px;
+}
